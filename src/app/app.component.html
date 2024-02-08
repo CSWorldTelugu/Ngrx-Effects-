@@ -1,0 +1,22 @@
+<div class="container" *ngIf="!error">
+  <h1>Effects in ngrx with example</h1>
+  <table class="table table-bordered mt-3 w-50">
+    <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Email:</th>
+        <th>Mobile:</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="error" class="text-danger">Error while fetrching user data</div>
